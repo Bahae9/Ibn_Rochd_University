@@ -65,7 +65,7 @@
               >
                 <div class="d-flex justify-content-center py-4">
                   <a
-                    href="land-page.html"
+                    href="/"
                     class="logo d-flex align-items-center w-auto"
                   >
                     <img src="static/frontend/images/Logo.png" alt="" />
@@ -85,7 +85,7 @@
                       </p>
                     </div>
 
-                    <form class="row g-3 needs-validation" novalidate>
+                    <form class="row g-3 needs-validation" novalidate action="{% url "signup" %}" method="post">
                       {% csrf_token %}
                       <div class="col-12">
                         <label for="yourName" class="form-label"
@@ -95,7 +95,7 @@
                           type="text"
                           name="name"
                           class="form-control"
-                          id="yourName"
+                          id="name"
                           required
                         />
                         <div class="invalid-feedback">
@@ -111,7 +111,7 @@
                           type="email"
                           name="email"
                           class="form-control"
-                          id="yourEmail"
+                          id="email"
                           required
                         />
                         <div class="invalid-feedback">
@@ -125,18 +125,18 @@
                         >
                         <input
                           type="password"
-                          name="password2"
+                          name="password"
                           class="form-control"
-                          id="password2"
+                          id="password"
                           required
                         />
                         <div class="invalid-feedback">
-                          Please enter your password!
+                          Please confirm your password!
                         </div>
                       </div>
                       <div class="col-12">
                         <label for="yourPassword" class="form-label">Re-enter Password</label>
-                        <input type="password" name="password" class="form-control" id="yourPassword" required>
+                        <input type="password" name="password2" class="form-control" id="password2" required>
                         <div class="invalid-feedback">Please re-enter your password!</div>
                       </div>
   
@@ -145,9 +145,10 @@
                           <label for="registration_type">Role:</label>
                           <select name="registration_type">
                           <option value="">Please select one…</option>
-                          <option value="female">Teacher</option>
-                          <option value="male">Parent</option>
-                          <option value="non-binary">Student</option>
+                          <option value="teacher">Teacher</option>
+                          <option value="parent">Parent</option>
+                          <option value="student">Student</option>
+                          <option value="just_test">just test</option>
                       </select>
                       <div class="col-12">
                         <div class="form-check">
