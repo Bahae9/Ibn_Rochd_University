@@ -44,12 +44,12 @@
       
       <div class="container-fluid">
         <div class="d-flex align-items-center">
-          <div class="site-logo mr-auto w-25"><a href="land-page.html">Ibn Rochd University</a></div>
+          <div class="site-logo mr-auto w-25"><a href="/">Ibn Rochd University</a></div>
 
           <div class="mx-auto text-center">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
-                <li><a href="land" class="nav-link">Home</a></li>
+                <li><a href="#home-section" class="nav-link">Home</a></li>
                 <li><a href="#courses-section" class="nav-link">Courses</a></li>
                 <li><a href="#programs-section" class="nav-link">Programs</a></li>
                 <li><a href="teachers" class="nav-link">Teachers</a></li>
@@ -82,7 +82,7 @@
                 <div class="col-lg-6 mb-4">
                   <h1  data-aos="fade-up" data-aos-delay="100">Learn From The Expert</h1>
                   <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">Ibn Rochd Unievrsity, committed to academic excellence and holistic student development, faces various challenges in efficiently managing its students, administration, parent, teacher, and overall school operations.</p>
-                  <p data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary py-3 px-5 btn-pill">Admission Now</a></p>
+                  <p data-aos="fade-up" data-aos-delay="300"><a href="signup" class="btn btn-primary py-3 px-5 btn-pill">Admission Now</a></p>
 
                 </div>
 
@@ -127,7 +127,7 @@
 
             <div class="course bg-white h-100 align-self-stretch">
               <figure class="m-0">
-                <a href="course-single.html"><img src="static/frontend/images/img_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="course-single"><img src="static/frontend/images/img_1.jpg" alt="Image" class="img-fluid"></a>
               </figure>
               <div class="course-inner-text py-4 px-4">
                 <span class="course-price">649900DA</span>
@@ -143,7 +143,7 @@
 
             <div class="course bg-white h-100 align-self-stretch">
               <figure class="m-0">
-                <a href="course-single.html"><img src="static/frontend/images/img_2.jpg" alt="Image" class="img-fluid"></a>
+                <a href="course-single"><img src="static/frontend/images/img_2.jpg" alt="Image" class="img-fluid"></a>
               </figure>
               <div class="course-inner-text py-4 px-4">
                 <span class="course-price">899000DA</span>
@@ -159,7 +159,7 @@
 
             <div class="course bg-white h-100 align-self-stretch">
               <figure class="m-0">
-                <a href="course-single.html"><img src="static/frontend/images/img_3.jpg" alt="Image" class="img-fluid"></a>
+                <a href="course-single"><img src="static/frontend/images/img_3.jpg" alt="Image" class="img-fluid"></a>
               </figure>
               <div class="course-inner-text py-4 px-4">
                 <span class="course-price">759000DA</span>
@@ -177,7 +177,7 @@
 
             <div class="course bg-white h-100 align-self-stretch">
               <figure class="m-0">
-                <a href="course-single.html"><img src="static/frontend/images/img_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="course-single"><img src="static/frontend/images/img_1.jpg" alt="Image" class="img-fluid"></a>
               </figure>
               <div class="course-inner-text py-4 px-4">
                 <span class="course-price">649900DA</span>
@@ -193,7 +193,7 @@
 
             <div class="course bg-white h-100 align-self-stretch">
               <figure class="m-0">
-                <a href="course-single.html"><img src="static/frontend/images/img_2.jpg" alt="Image" class="img-fluid"></a>
+                <a href="course-single"><img src="static/frontend/images/img_2.jpg" alt="Image" class="img-fluid"></a>
               </figure>
               <div class="course-inner-text py-4 px-4">
                 <span class="course-price">899000DA</span>
@@ -209,7 +209,7 @@
 
             <div class="course bg-white h-100 align-self-stretch">
               <figure class="m-0">
-                <a href="course-single.html"><img src="static/frontend/images/img_3.jpg" alt="Image" class="img-fluid"></a>
+                <a href="course-single"><img src="static/frontend/images/img_3.jpg" alt="Image" class="img-fluid"></a>
               </figure>
               <div class="course-inner-text py-4 px-4">
                 <span class="course-price">759000DA</span>
@@ -452,6 +452,7 @@
             <p class="mb-5">Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
           
             <form method="post" data-aos="fade">
+              {% csrf_token %}
               <div class="form-group row">
                 <div class="col-md-6 mb-3 mb-lg-0">
                   <input type="text" class="form-control" placeholder="First name">
@@ -503,10 +504,10 @@
           <div class="col-md-3 ml-auto">
             <h3>Links</h3>
             <ul class="list-unstyled footer-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Programs</a></li>
-              <li><a href="#">Teachers</a></li>
+              <li><a href="#home-section">Home</a></li>
+              <li><a href="#courses-section">Courses</a></li>
+              <li><a href="#programs-section">Programs</a></li>
+              <li><a href="/teachers">Teachers</a></li>
             </ul>
           </div>
 
